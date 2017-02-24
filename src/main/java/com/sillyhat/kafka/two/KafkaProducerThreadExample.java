@@ -58,7 +58,7 @@ public class KafkaProducerThreadExample {
 
         public void run() {
             Producer<String, String> producer = new KafkaProducer<String,String>(getKafkaProperties());
-            for (int i = 1; i <= 50000; i++) {
+            for (int i = 500100; i <= 50000000; i++) {
 //                String message = "[" + threadName + "][" + sdfTime.format(new Date()) + "][" + i + "]";
                 try {
                     Thread.sleep(1000);
@@ -67,9 +67,9 @@ public class KafkaProducerThreadExample {
                 }
 //                producer.send(new ProducerRecord<String,String>("log_collect_topic", threadName, message));
                 String message = "";
-                for (int j = 0; j < 10; j++) {
-                    message += i+"";
-                }
+//                for (int j = 0; j < 10; j++) {
+//                    message += i+"";
+//                }
                 producer.send(new ProducerRecord<String,String>("log_collect_topic", threadName, message));
                 System.out.println("[" + threadName + "][" + sdfTime.format(new Date()) + "][" + message + "]");
 //                logger.info("[" + threadName + "][" + sdfTime.format(new Date()) + "]");

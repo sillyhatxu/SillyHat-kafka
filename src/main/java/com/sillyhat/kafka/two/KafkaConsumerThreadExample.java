@@ -44,7 +44,7 @@ public class KafkaConsumerThreadExample {
         }
         fixedThreadPool.execute(run5);
         logger.info("Thread G Start Finish");
-        Thread thread = new Thread(new KafkaConsumerThread2("SillyHat","ThreadH"));
+        Thread thread = new Thread(new KafkaConsumerThread2("SillyHat","ThreadHAHAHAHAHAHAHAHA"));
         thread.start();
     }
 
@@ -54,6 +54,8 @@ public class KafkaConsumerThreadExample {
         props.put("bootstrap.servers", "192.168.233.129:19001,192.168.233.130:19001,192.168.233.131:19001");
 //        props.put("group.id", "groupTestMessageThreadB");
         props.put("group.id", groupId);
+        props.put("auto.offset.reset", "latest");//最新offset
+//        props.put("auto.offset.reset", "earliest");//
 //        props.put("enable.auto.commit", "true");
 //        props.put("auto.commit.interval.ms", "1000");
 //        props.put("session.timeout.ms", "30000");

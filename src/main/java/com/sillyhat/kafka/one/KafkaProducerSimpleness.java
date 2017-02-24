@@ -31,7 +31,7 @@ public class KafkaProducerSimpleness {
         for(int i = 0; i < 500000; i++){
             String message = "[" + i + "]";
             logger.info(message);
-            producer.send(new ProducerRecord<String,String>("log_collect_topic", "luckKey", message));
+            producer.send(new ProducerRecord<String,String>("test_reset_topic", "luckKey", message));
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

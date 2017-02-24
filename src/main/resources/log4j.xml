@@ -79,7 +79,7 @@
 <!-- 		<appender-ref ref="ASYNC_test" /> -->
 <!-- 	</category> -->
 	<root>
-         <priority value ="debug"/>
+         <priority value ="info"/>
          <appender-ref ref="filelog_appender"/>
          <appender-ref ref="filelog_daily"/>
          <appender-ref ref="console"/>
