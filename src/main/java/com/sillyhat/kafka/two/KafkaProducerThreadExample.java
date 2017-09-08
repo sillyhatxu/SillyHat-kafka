@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
  * KafkaProducerThreadExample
  *
  * @author 徐士宽
- * @date 2017/2/23 10:57
+ * @date 2016/2/23 10:57
  */
 public class KafkaProducerThreadExample {
 
